@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<title>Sign-up form</title>
+		<style>
+			body{
+				margin-bottom: 40px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				color: white;
+			}
+			h1{
+				margin-bottom: 30px;
+				margin-top: 30px;
+				text-align: center;
+				font-size: 40px;
+
+			}
+			form{
+				margin: 130px auto;
+				width: 320px;
+				padding-left: 600px;
+
+			}
+			p{
+				
+				margin: 4px;
+				font-size: 20px;
+
+
+			}
+			.input{
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 8px;
+				border: 1px solid gray;
+				border-radius: 5px;
+				
+			}
+			.submit1{
+				background-color: #04AA6D;
+				width: 100%;
+				color: white;
+				padding: 9px;
+				margin-top: 11px;
+				border: 1px solid gray;
+				border-radius: 5px;
+				font-size: 15px;
+			}
+
+		</style>
+	</head>
+	<body background="https://img.freepik.com/free-photo/top-view-food-frame-with-copy-space_23-2148723447.jpg?w=1060&t=st=1669710901~exp=1669711501~hmac=59e5fbdb8f244c01c891d47decb9c74a655fc404bbcd5bf6f9a0c1b142aa979a" width=500px height=600px>
+		<form name="signupform1" onsubmit ="return validation()" method="GET" action="/signupSubmit">
+		
+			<h1 class="mainheading" align="center">Sign-up Form</h1>
+			<div>
+			<p><b>Full Name</b></p>
+			<input class="input" type="text" name="fname1" id="fname1" placeholder="Full Name" pattern="[a-zA-Z ]{3,}">
+			</div>
+			<p><b>E-mail</b></p>
+			<input class="input" type="name" name="email1" id="email1" placeholder="Enter Your Email Id">
+			<p><b>Password</b></p>
+			<input class="input" type="password" name="pass" id="pass" placeholder="Create Password" required>
+			<br>
+			<p><b>Confirm Password</b></p>
+			<input class="input" type="password" name="pass2" id="pass2" placeholder="Confirm Password">
+			<center><b><input class="submit1" type="submit" value="submit" name=""></b></center>
+		
+		</form>
+		<script>
+			function validation()
+			{
+				
+				var fname=document.signupform1.fname1.value;
+				var email=document.signupform1.email1.value;
+				var atpos=email.indexOf("@");
+				var atpos1=email.lastIndexOf(".");
+				var pass1=document.signupform1.pass.value;
+				var passs=document.signupform1.pass2.value;
+				
+				if(fname=="")
+				{
+					alert("provide Fullname");
+					return false;
+				}
+				else if(email=="")
+				{
+					alert("Provide email id");
+					return false;
+				}
+				else if(atpos<=0||atpos1<0||atpos>atpos1||(atpos1-atpos)<2||atpos1+1==email.length){
+					alert("Invalid Email Id");
+					return false;
+				}
+				else if(pass1.length<8)
+				{
+					alert("password length should be atleast 8 characters");
+					return false;
+				}
+				else if(pass1!=passs||passs=="")
+				{
+					alert("Password did not match");
+					return false;
+				}
+				
+			}
+				
+				
+			
+		</script>
+	</body>
+</html>
