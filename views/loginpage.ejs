@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%=title%></title>
+    <style>
+        body
+        {
+            margin:0;
+            padding:0;
+           
+           
+            
+            background: url(https://img.freepik.com/free-photo/top-view-food-frame-with-copy-space_23-2148723447.jpg?w=1060&t=st=1669710901~exp=1669711501~hmac=59e5fbdb8f244c01c891d47decb9c74a655fc404bbcd5bf6f9a0c1b142aa979a);
+            background-position: center;
+            
+            background-size: cover;
+            text-align: right;
+            font-family: sans-serif;
+            
+        }
+        .loginbox
+        {
+            width: 320px;
+            height:420px;
+            background:white;
+            color:black;
+            top:50%;
+            left:50%;
+            position:absolute;
+            transform:translate(-50%,-50%);
+            box-sizing: border-box;
+            border:2px;
+            border-style: double;
+            border-color: black;
+            border-radius: 20px;
+            text-align: center;
+            padding:20px 20px;
+        }
+        .loginbox p
+        {
+            margin:0;
+            padding:0;
+            font-weight: bold;
+        }
+        .loginbox input{
+            width:150px;
+            margin-bottom: 20px;
+        }
+        .loginbox input[type="text"],input[type="password"]
+        {
+            border:none;
+            border-bottom: 1px solid black;
+            background:transparent;
+            outline: none;
+            height:40px;
+            color:black;
+            font-size:16px;
+        }
+
+       
+        .loginbox input[type="Submit"]
+        {
+            border:none;
+            outline: none;
+            height:40px;
+            background:cornflowerblue;
+            color:#fff;
+            border-radius: 20px;
+            
+
+        }
+        .loginbox a{
+            text-decoration:none;
+            font-size:12px;
+            line-height:20px;
+            color:black;
+        }
+        .loginbox a:hover{
+            color:green;
+        }
+        h1
+        {
+            margin:0;
+            padding:0 0 20px;
+            text-align: center;
+            font-size:22px;
+
+        }
+    </style>
+    </head>
+    <body>
+        <div>
+        <div class="loginbox">
+            <h1>Login Here</h1>
+            <form  action="/loginSubmit" method="GET">
+                <p>Username</p><br>
+                <input type="text" name="username" placeholder="username"><br><br>
+                <p>password</p><br>
+                <input type="Password" name="password" value="" placeholder="password"><br><br>
+                <input type="Submit"><br><br>
+                Dont have an account?<a href="#">Signup</a>
+            </form>
+        </div>
+    </div>
+    </body>
+    </html>
